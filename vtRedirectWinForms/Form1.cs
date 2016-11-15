@@ -70,13 +70,19 @@ namespace vtRedirectWinForms
                 if (vtResponseBody.status == "ok")
                 {
                     //the pending payment has been successfully posted, now time to complete the payment with a redirect to magic//
-                    //return Redirect("https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/seminole-county/" + vtResponseBody.TRANSACTIONID);
+                    //this is the url - "https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/seminole-county/" + vtResponseBody.TRANSACTIONID
+                    //create a way to redirect to it however you want...
                 }
             }
             catch (Exception)
             {
                 //error
             }
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            txtTransactionID.Text = Guid.NewGuid().ToString().Replace("-", "");
         }
     }
 }

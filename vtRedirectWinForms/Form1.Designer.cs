@@ -60,6 +60,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtResponse = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.btnGenerate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtClientKey
@@ -76,7 +77,7 @@
             this.txtTransactionID.Name = "txtTransactionID";
             this.txtTransactionID.Size = new System.Drawing.Size(361, 20);
             this.txtTransactionID.TabIndex = 1;
-            this.txtTransactionID.Text = "must be unique";
+            this.txtTransactionID.Text = "hit generate to create a new one";
             // 
             // txtPaymentType
             // 
@@ -335,11 +336,22 @@
             this.label16.TabIndex = 31;
             this.label16.Text = "Response";
             // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Location = new System.Drawing.Point(472, 89);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(67, 23);
+            this.btnGenerate.TabIndex = 32;
+            this.btnGenerate.Text = "Generate";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 714);
+            this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtResponse);
             this.Controls.Add(this.label15);
@@ -413,6 +425,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtResponse;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnGenerate;
     }
 }
 
