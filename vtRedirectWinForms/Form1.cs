@@ -67,6 +67,11 @@ namespace vtRedirectWinForms
                 //here I am assinging the json response back to object format so we can access all the different props like: feeamount, reponsecode, etc
                 vtResponse.VT_TRANSACTION vtResponseBody = JsonConvert.DeserializeObject<vtResponse.VT_TRANSACTION>(response.Content);
                 txtResponse.Text = vtResponseBody.status.ToString();
+                if (vtResponseBody.status == "ok")
+                {
+                    //the pending payment has been successfully posted, now time to complete the payment with a redirect to magic//
+                    //return Redirect("https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/seminole-county/" + vtResponseBody.TRANSACTIONID);
+                }
             }
             catch (Exception)
             {

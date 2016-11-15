@@ -84,7 +84,7 @@
             this.txtPaymentType.Name = "txtPaymentType";
             this.txtPaymentType.Size = new System.Drawing.Size(361, 20);
             this.txtPaymentType.TabIndex = 2;
-            this.txtPaymentType.Text = "Tax Bill";
+            this.txtPaymentType.Text = "BUSINESS TAX";
             // 
             // txtTotalAmount
             // 
